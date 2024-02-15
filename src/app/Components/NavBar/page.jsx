@@ -1,4 +1,3 @@
-import { FiMenu } from "react-icons/fi";
 import MenuIcon from "./MenuIcon";
 import Navigation from "./Navigation";
 
@@ -8,7 +7,7 @@ const NavBar = () => {
             <div className="flex-1">
                 <Navigation />
             </div>
-            <div>
+            <div className="sm:hidden">
                 <MenuIcon />
             </div>
         </div>

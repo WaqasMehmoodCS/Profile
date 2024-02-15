@@ -17,11 +17,13 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Suspense fallback={<div>Loading...</div>}>
           <MenuContextWrapper>
-            <div>
-              <div>
-                <NavBar />
+            <div className="bg-[url('/pic.png')] bg-cover bg-center">
+              <div className="bg-secondary/60 flex justify-between">
+                <div className="flex-1">
+                  <NavBar />
+                </div>
+                <div className="flex-1">{children}</div>
               </div>
-              <div>{children}</div>
             </div>
           </MenuContextWrapper>
         </Suspense>
