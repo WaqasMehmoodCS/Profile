@@ -18,12 +18,16 @@ export default function RootLayout({ children }) {
         <Suspense fallback={<div>Loading...</div>}>
           <MenuContextWrapper>
             <div className="bg-[url('/pic.png')] bg-cover bg-center">
-              <div className="bg-secondary/60 flex justify-between">
-                <div className="flex-1">
+             
+             
+              <div className="bg-secondary/60 sm:flex justify-between">
+                <div className="sm:flex-1">
                   <NavBar />
                 </div>
-                <div className="flex-1">{children}</div>
+                <div className="sm:flex-[3]">{children}</div>
               </div>
+
+
             </div>
           </MenuContextWrapper>
         </Suspense>

@@ -2,6 +2,6 @@
 
 export default function Home() {
   return (
-    <main className="">Waaqas</main>
+    <main className="text-primary">Waaqas</main>
   );
 }
