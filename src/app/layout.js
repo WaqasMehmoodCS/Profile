@@ -1,9 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "./Components/NavBar/page";
 
 import { Suspense } from "react";
-import MenuContextWrapper from "./Context/MenuContextWrapper";
+
+import NavBar from "@/Components/NavBar/page";
+import MenuContextWrapper from "@/Context/MenuContextWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,16 +19,12 @@ export default function RootLayout({ children }) {
         <Suspense fallback={<div>Loading...</div>}>
           <MenuContextWrapper>
             <div className="bg-[url('/pic.png')] bg-cover bg-center h-screen">
-             
-             
               <div className="bg-secondary/60 sm:flex justify-between h-screen">
                 <div className="sm:flex-1">
                   <NavBar />
                 </div>
                 <div className="sm:flex-[3]">{children}</div>
               </div>
-
-
             </div>
           </MenuContextWrapper>
         </Suspense>
