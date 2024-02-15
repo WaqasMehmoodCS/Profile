@@ -3,6 +3,9 @@
 import { useContext } from "react"
 import Picture from "./Picture"
 import { MenuContext } from "@/Context/MenuContextWrapper"
+import SocialMediaIcons from "./SocialMediaIcons"
+import MenuLinks from "./MenuLinks"
+import Name from "./Name"
 
 
 const Navigation = () => {
@@ -12,8 +15,15 @@ const Navigation = () => {
             <div>
                 <Picture />
             </div>
-
-
+            <div  className="mt-44">
+                <Name />
+            </div>
+            <div className="mt-2">
+                <SocialMediaIcons />
+            </div>
+            <div className="mt-4">
+                <MenuLinks />
+            </div>
         </div>
     )
 }

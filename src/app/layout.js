@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
                 <div className="sm:flex-1">
                   <NavBar />
                 </div>
-                <div className="sm:flex-[3]">{children}</div>
+                <div className="sm:flex-[2]">{children}</div>
               </div>
             </div>
           </MenuContextWrapper>
