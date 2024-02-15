@@ -14,7 +14,7 @@ const Navigation = () => {
                 <Picture />
             </div>
             <div className="mt-44">
-                <SocialMediaIcons />
+                {/* <SocialMediaIcons /> */}
             </div>
 
 
