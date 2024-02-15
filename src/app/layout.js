@@ -1,9 +1,11 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "./Components/NavBar/page";
+
 
 import { Suspense } from "react";
-import MenuContextWrapper from "./Context/MenuContextWrapper";
+import MenuContextWrapper from "@/Context/MenuContextWrapper";
+import NavBar from "@/Components/NavBar/page";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
