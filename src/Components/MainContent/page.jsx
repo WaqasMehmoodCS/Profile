@@ -3,7 +3,7 @@ import HomePage from './Homepage/page'
 
 const MainContent = () => {
     return (
-        <div className='h-full sm:text-4xl'>
+        <div className='h-full text-xl sm:text-4xl'>
             <HomePage />
         </div>
     )

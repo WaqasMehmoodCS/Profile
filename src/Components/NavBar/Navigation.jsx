@@ -15,13 +15,13 @@ const Navigation = () => {
             <div>
                 <Picture />
             </div>
-            <div  className="mt-44">
+            <div  className="mt-40">
                 <Name />
             </div>
             <div className="mt-2">
                 <SocialMediaIcons />
             </div>
-            <div className="mt-4">
+            <div className="mt-2">
                 <MenuLinks />
             </div>
         </div>

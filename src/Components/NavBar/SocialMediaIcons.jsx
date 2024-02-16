@@ -16,7 +16,7 @@ const SocialMediaIcons = () => {
             {socialIcons && socialIcons.map((icon) => {
                 return (
                     <Link key={icon.id} href={icon.address} target="_blank">
-                        <div className="ring-1 p-2 rounded-full hover:cursor-pointer  hover:bg-slate-600 hover:text-secondary duration-500">
+                        <div className=" p-2 rounded-full hover:cursor-pointer  hover:bg-other hover:text-primary duration-500">
                             <div>{icon.icon}</div>
                         </div>
                     </Link>

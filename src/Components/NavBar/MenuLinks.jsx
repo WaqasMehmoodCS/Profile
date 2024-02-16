@@ -14,10 +14,10 @@ const MenuLinks = () => {
     ]
 
     return (
-        <div className="flex flex-col gap-2 p-1 sm:p-3 sm:gap-8">
+        <div className="flex flex-col gap-6 p-1 sm:p-3 sm:gap-5">
             {links && links.map((link) => {
                 return (
-                    <div key={link.id} className="p-1 pl-2 sm:p-3  rounded-lg ring-1 flex gap-8 hover:bg-other duration-500">
+                    <div key={link.id} className="p-1 pl-2 sm:p-3  rounded-lg ring-1 flex gap-8 hover:bg-other hover:font-semibold hover:tracking-wider duration-500 items-center">
                         <div>{link.icon}</div>
                         <div>{link.name}</div>
                     </div>
