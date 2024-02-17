@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <div className='font-quick flex justify-between h-16'>
             <div className="flex-1">
-                <div className="">
+                <div>
                     <Navigation />
                 </div>
             </div>
