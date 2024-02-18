@@ -7,7 +7,7 @@ const Skills = ({ skills }) => {
                 {skills.map((skill) => {
                     return (
 
-                        <div key={skill.id} className='flex items-center ring-1 ring-secondary w-1/2 md:w-1/4 lg:w-1/6 p-1 sm:p-2 flex-wrap'>
+                        <div key={skill.id} className='flex items-center ring-1 ring-secondary w-1/2 md:w-1/4 p-1 sm:p-2 flex-wrap'>
                             <div>{skill.name}</div>
                         </div>
                     )
