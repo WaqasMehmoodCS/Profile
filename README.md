@@ -1,43 +1,50 @@
-Portfolio Website
+# Portfolio Website
+
 Welcome to my portfolio website! This project showcases my skills, projects, and experience as a web developer.
 
-Technologies Used
-Next.js
-React
-Tailwind CSS
-React Icons
-React Simple Typewriter
-Features
-Built with Next.js for server-side rendering and routing.
-Utilizes React for building dynamic user interfaces.
-Styled with Tailwind CSS for rapid UI development.
-Includes animations and effects using React Icons and React Simple Typewriter.
-Responsive design for seamless viewing on all devices.
-Getting Started
+## Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [React Simple Typewriter](https://www.npmjs.com/package/react-simple-typewriter)
+
+## Features
+
+- Built with Next.js for server-side rendering and routing.
+- Utilizes React for building dynamic user interfaces.
+- Styled with Tailwind CSS for rapid UI development.
+- Includes animations and effects using React Icons and React Simple Typewriter.
+- Responsive design for seamless viewing on all devices.
+
+## Getting Started
+
 To run this project locally, follow these steps:
 
-Clone the repository:
+1. Clone the repository:
 
-bash
-Copy code
 git clone git@github.com:WaqasMehmoodCS/Profile.git
-Install dependencies:
 
-bash
-Copy code
+2. Install dependencies:
 npm install
-Start the development server:
 
-bash
-Copy code
+3. Start the development server:
+
 npm run dev
-Open your browser and navigate to http://localhost:3000 to view the website.
 
-Deployment
-This project is deployed using Vercel. You can access the live version here.
+4. Open your browser and navigate to `http://localhost:3000` to view the website.
 
-License
-This project is licensed under the MIT License.
+## Deployment
 
-Author
-Waqas Mehmood
+This project is deployed using [Vercel](https://vercel.com/). You can access the live version [here](https://your-portfolio.vercel.app/).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Author
+
+- [Waqas Mehmood](https://github.com/WaqasMehmoodCS)
+
+
