@@ -22,29 +22,22 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 To run this project locally, follow these steps:
 
-1. Clone the repository:
+1. Clone the repository: git clone git@github.com:WaqasMehmoodCS/Profile.git
 
-git clone git@github.com:WaqasMehmoodCS/Profile.git
+2. Install dependencies: npm install
 
-2. Install dependencies:
-npm install
-
-3. Start the development server:
-
-npm run dev
+3. Start the development server: npm run dev
 
 4. Open your browser and navigate to `http://localhost:3000` to view the website.
 
 ## Deployment
 
-This project is deployed using [Vercel](https://vercel.com/). You can access the live version [here](https://your-portfolio.vercel.app/).
+This project is deployed using [Vercel](https://vercel.com/). You can access the live version [here](https://profile-waqas.vercel.app/).
 
-## License
+<!-- ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE). -->
 
 ## Author
 
 - [Waqas Mehmood](https://github.com/WaqasMehmoodCS)
-
-
