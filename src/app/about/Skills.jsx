@@ -3,7 +3,7 @@ const Skills = ({ skills }) => {
     // console.log(skills)
     return (
         <div className='p-1 text-xs' >
-            <div className='flex text-secondary sm:text-lg flex-wrap'>
+            <div className='flex text-secondary flex-wrap'>
                 {skills.map((skill) => {
                     return (
 
