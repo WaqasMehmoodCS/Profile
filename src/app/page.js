@@ -2,7 +2,7 @@ import MainContent from "@/Components/MainContent/page";
 
 export default function Home() {
   return (
-    <main className="h-screen">
+    <main className="h-full">
       <MainContent />
     </main>
   );

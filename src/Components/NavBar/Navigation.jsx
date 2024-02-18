@@ -11,7 +11,7 @@ import Name from "./Name"
 const Navigation = () => {
     const { open } = useContext(MenuContext)
     return (
-        <div className={`ease-in-out ${open ? 'translate-x-0' : '-translate-x-[1500px]'} bg-secondary/90 max-w-80 2xl:max-w-full text-primary p-4 rounded-r-lg duration-500 sm:translate-x-0 h-screen`}>
+        <div className={`p-2 ease-in-out ${open ? 'translate-x-0' : '-translate-x-[1500px]'} bg-secondary/90  text-primary rounded-r-lg duration-500 sm:translate-x-0 h-[100dvh]`}>
             <div>
                 <Picture />
             </div>

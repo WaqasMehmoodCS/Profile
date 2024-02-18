@@ -15,18 +15,38 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={inter.className}
+        style={{
+          backgroundImage: 'url("/pic.png")',
+          width: "100dvw",
+          height: "100dvh",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <Suspense fallback={<div>Loading...</div>}>
           <MenuContextWrapper>
-            <div className="bg-[url('/pic.png')] bg-cover bg-center overflow-hidden ">
-              <div className="bg-secondary/60 sm:flex sm:justify-between ">
-                <div className="border border-red-600 sm:flex-1 2xl:flex-1 static">
+            <div className="bg-secondary/60 h-full">
+
+
+              <div className="h-full overflow-auto sm:flex sm:justify-between ">
+
+                <div className="flex-1 sticky top-0 left-0">
                   <NavBar />
                 </div>
-                <div className="border border-green-600 flex-1 h-screen sm:flex-[4] 2xl:flex-[3]">
+
+                <div className="h-full flex-1 sm:flex-[3]">
                   {children}
                 </div>
+
+
               </div>
+
+
+
+
             </div>
           </MenuContextWrapper>
         </Suspense>

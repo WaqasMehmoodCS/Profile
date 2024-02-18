@@ -8,7 +8,7 @@ const SocialMediaIcons = () => {
     const socialIcons = [
         { id: 1, name: "github", icon: <FaGithub size={20} />, address: "https://github.com/WaqasMehmoodCS" },
         { id: 2, name: "linkedIn", icon: <FaLinkedin size={20} />, address: "https://www.linkedin.com/in/waqas-mehmood-472509131/" },
-        { id: 3, name: "gmail", icon: <SiGmail size={20} />, address: "https://mail.google.com/mail/u/0/#inbox?compose=new" },
+        { id: 3, name: "gmail", icon: <SiGmail size={20} />, address: "mailto:waqasmehmoodcs@gmail.com" },
         // { id: 4, name: "phone", icon: <FaPhoneAlt size={20} />, address: "/" },
     ];
     return (

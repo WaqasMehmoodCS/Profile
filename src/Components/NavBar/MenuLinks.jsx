@@ -6,9 +6,11 @@ import { FaRegAddressCard } from "react-icons/fa";
 import Link from "next/link";
 import { useContext } from "react";
 import { MenuContext } from "@/Context/MenuContextWrapper";
+import { usePathname } from "next/navigation";
 
 
 const MenuLinks = () => {
+    const path = usePathname()
     const { open, setOpen } = useContext(MenuContext)
     const links = [
         { id: 1, name: 'Home', icon: <AiTwotoneHome size={18} />, address: '/' },
@@ -22,7 +24,7 @@ const MenuLinks = () => {
             {links && links.map((link) => {
                 return (
                     <Link key={link.id} href={link.address} onClick={() => { setOpen(!open) }}>
-                        <div className="p-1 pl-2 sm:p-3  rounded-lg ring-1 flex gap-8 hover:bg-other hover:cursor-pointer hover:font-semibold hover:tracking-wider duration-500 items-center">
+                        <div className={`p-1 pl-2 sm:p-3  rounded-lg ring-1 flex gap-8 hover:bg-other hover:cursor-pointer hover:font-semibold hover:tracking-wider duration-500 items-center ${path === link.address ? 'bg-other':''}`}>
                             <div>{link.icon}</div>
                             <div>{link.name}</div>
                         </div>
