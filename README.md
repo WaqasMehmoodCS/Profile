@@ -22,7 +22,7 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 To run this project locally, follow these steps:
 
-1. Clone the repository: git clone git@github.com:WaqasMehmoodCS/Profile.git
+1. Clone the repository: git clone (https://github.com/WaqasMehmoodCS/Profile.git)
 
 2. Install dependencies: npm install
 
