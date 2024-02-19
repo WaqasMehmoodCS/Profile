@@ -5,9 +5,7 @@ const NavBar = () => {
     return (
         <div className='font-quick flex justify-between h-16'>
             <div className="flex-1">
-                <div>
-                    <Navigation />
-                </div>
+                <Navigation />
             </div>
             <div className="sm:hidden">
                 <MenuIcon />

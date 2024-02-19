@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
 
               <div className="h-full sm:flex sm:justify-between overflow-auto">
 
-                <div className="flex-1 sticky top-0 left-0 md:flex-[1] z-50">
+                <div className="flex-1 sticky top-0 left-0 z-50">
                   <NavBar />
                 </div>
 
