@@ -31,13 +31,13 @@ export default function RootLayout({ children }) {
             <div className="bg-secondary/60 h-full">
 
 
-              <div className="h-full overflow-auto sm:flex sm:justify-between ">
+              <div className="h-full sm:flex sm:justify-between overflow-auto">
 
                 <div className="flex-1 sticky top-0 left-0 md:flex-[1] z-50">
                   <NavBar />
                 </div>
 
-                <div className="h-full flex-1 sm:flex-[2] md:flex-[3] z-50">
+                <div className="h-full flex-1 sm:flex-[2] md:flex-[3] z-50 ">
                   {children}
                 </div>
 
