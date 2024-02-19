@@ -14,23 +14,23 @@ const Card = (props) => {
     const { degree, university, subjects, year, cgpa } = qualification
     const { familierTechnologies, summary } = about
     return (
-        <div className="rounded-lg p-4 bg-slate-200 text-secondary shadow-lg shadow-other/30 animate-scale-up-center">
+        <div className="border border-white bg-slate-500/70 rounded-lg text-primary w-full p-4 animate-scale-up-center">
             {/* <div className="rounded-lg p-2 bg-secondary/60 text-primary shadow-lg shadow-other/30"> */}
             {title === 'about' &&
                 <>
-                    <div className="uppercase font-quick tracking-wider font-bold text-xl underline">{title}</div>
+                    <div className="uppercase font-quick text-other tracking-widest font-bold text-xl underline">{title}</div>
                     <div className="normal-case font-manrope tracking-wider text-justify text-sm">{summary}</div>
                 </>
             }
             {title === 'Familiar Technologies' &&
                 <>
-                    <div className="uppercase font-quick tracking-wider font-bold text-xl underline">{title}</div>
+                    <div className="uppercase font-quick text-other tracking-widest font-bold text-xl underline">{title}</div>
                     <div className="normal-case font-manrope tracking-wider text-justify text-sm">{familierTechnologies}</div>
                 </>
             }
             {title === 'qualification' &&
                 <>
-                    <div className="uppercase font-quick tracking-wider font-bold text-xl underline">{title}</div>
+                    <div className="uppercase font-quick text-other tracking-widest font-bold text-xl underline">{title}</div>
                     <div className="normal-case font-manrope tracking-wider text-justify text-sm">{degree} in {subjects}</div>
                     <div className="normal-case font-manrope tracking-wider text-justify text-sm">{university}</div>
                     <div className="normal-case font-manrope tracking-wider text-justify text-sm">{year}</div>
@@ -39,7 +39,7 @@ const Card = (props) => {
             }
             {title === 'skills' &&
                 <>
-                    <div className="uppercase font-quick tracking-wider font-bold text-xl underline">{title}</div>
+                    <div className="uppercase font-quick text-other tracking-widest font-bold text-xl underline">{title}</div>
                     <Skills skills={skills} />
                 </>
             }
