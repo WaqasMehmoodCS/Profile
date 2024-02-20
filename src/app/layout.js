@@ -18,35 +18,26 @@ export default function RootLayout({ children }) {
       <body
         className={inter.className}
         style={{
-          backgroundImage: 'url("/pic.png")',
           width: "100dvw",
           height: "100dvh",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          maxWidth: "2000px",
+          margin: "auto",
         }}
       >
         <Suspense fallback={<div>Loading...</div>}>
           <MenuContextWrapper>
-            <div className="bg-secondary/60 h-full">
+            <div className="bg-[url('/pic.png')] bg-no-repeat bg-cover h-full bg-center">
+              <div className="bg-secondary/60 h-full">
+                <div className="h-full sm:flex sm:justify-between overflow-auto">
+                  <div className="flex-1 sticky top-0 left-0 z-50">
+                    <NavBar />
+                  </div>
 
-
-              <div className="h-full sm:flex sm:justify-between overflow-auto">
-
-                <div className="flex-1 sticky top-0 left-0 z-50">
-                  <NavBar />
+                  <div className="h-full flex-1 sm:flex-[2] md:flex-[2] lg:flex-[3] z-50 ">
+                    {children}
+                  </div>
                 </div>
-
-                <div className="h-full flex-1 sm:flex-[2] md:flex-[3] z-50 ">
-                  {children}
-                </div>
-
-
               </div>
-
-
-
-
             </div>
           </MenuContextWrapper>
         </Suspense>

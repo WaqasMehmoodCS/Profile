@@ -15,14 +15,14 @@ const Navigation = () => {
             <div>
                 <Picture />
             </div>
-            <div className="mt-44 sm:mt-40">
+            <div className="mt-40 sm:mt-40">
                 <Name />
             </div>
-            <div className="mt-4 sm:mt-2">
+            <div className="">
                 <SocialMediaIcons />
             </div>
-            <div className="flex justify-center px-6 sm:px-0">
-                <div className="mt-8 w-full sm:mt-2">
+            <div className="flex justify-center px-6">
+                <div className="mt-2 w-full">
                     <MenuLinks />
                 </div>
             </div>
