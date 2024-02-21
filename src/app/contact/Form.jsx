@@ -37,7 +37,7 @@ const Form = () => {
 
             try {
                 setLoading(true)
-                const response = await axios.post(`/api/contact`, values)
+                const response = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/contact`, values)
                 console.log(response)
                 const responseData = await response.data
                 // console.log('Message is sent Successfuly:', responseData);
