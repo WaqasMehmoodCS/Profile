@@ -2,15 +2,17 @@
 
 import { LoadingContext } from "@/Context/LoadingContextWrapper";
 import axios from "axios";
+import dotenv from "dotenv";
 import { useFormik } from "formik";
 import { useContext, useEffect, useState } from "react";
 import * as Yup from 'yup'
 
+dotenv.config()
 
 const Form = () => {
     const { loading, setLoading } = useContext(LoadingContext)
     const [error, setError] = useState(false)
-    const [alert, setAlert] = useState(true)
+    const [alert, setAlert] = useState(false)
 
     useEffect(() => {
         if (alert === true) {
@@ -35,18 +37,21 @@ const Form = () => {
 
             try {
                 setLoading(true)
-                const response = await axios.post('http://localhost:3000/api/contact', values)
+                const response = await axios.post(`${process.env.NEXT_PUBLIC_DOMAIN}/api/contact`, values)
+                console.log(response)
                 const responseData = await response.data
-                console.log('Message is sent Successfuly:', responseData);
+                // console.log('Message is sent Successfuly:', responseData);
                 values.email = ''
                 values.message = ''
                 setLoading(false)
                 setAlert(true)
             } catch (error) {
 
-                console.error('Error sending form data:', error);
+                // console.error('Error sending form data:', error);
                 setLoading(false)
                 setError(true)
+                values.email = ''
+                values.message = ''
             }
         },
     });

@@ -18,7 +18,7 @@ const MenuLinks = () => {
         { id: 3, name: 'Services', icon: <GrUserWorker size={25} />, address: '/services' },
         { id: 4, name: 'Portfolio', icon: <BsProjector size={25} />, address: '/portfolio' },
         { id: 5, name: 'Resume', icon: <FaRegAddressCard size={25} />, address: '/resume' },
-        { id: 6, name: 'Contact Us', icon: <FaAddressBook size={25} />, address: '/contact' },
+        { id: 6, name: 'Contact', icon: <FaAddressBook size={25} />, address: '/contact' },
     ]
     return (
         <div className="flex flex-col gap-6 lg:gap-3 w-full">
