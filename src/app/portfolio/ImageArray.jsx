@@ -8,7 +8,7 @@ const ImageArray = ({ images }) => {
     useEffect(() => {
         const timer = setTimeout(nextImage, 3000);
         return () => clearTimeout(timer);
-    }, [currentImageIndex]);
+    }, [nextImage]);
 
     const nextImage = () => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
