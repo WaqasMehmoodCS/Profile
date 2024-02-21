@@ -5,10 +5,20 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const ImageArray = ({ images }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
     useEffect(() => {
-        const timer = setTimeout(nextImage, 3000);
-        return () => clearTimeout(timer);
-    }, [nextImage]);
+        const timer = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
+
+        return () => clearInterval(timer); // Cleanup function to clear the interval
+    }, [images]); // Dependency array to watch for changes in the images array
+
+
+    // useEffect(() => {
+    //     const timer = setTimeout(nextImage, 3000);
+    //     return () => clearTimeout(timer);
+    // }, [currentImageIndex]);
 
     const nextImage = () => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
