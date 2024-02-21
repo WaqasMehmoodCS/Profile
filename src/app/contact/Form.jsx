@@ -1,7 +1,10 @@
 'use client'
+import axios from "axios";
 import { useFormik } from "formik";
+import { useState } from "react";
 import * as Yup from 'yup'
 const Form = () => {
+    const [error, setError] = useState(false)
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -14,10 +17,17 @@ const Form = () => {
                 .required('Message is Required')
         }),
 
-        onSubmit: values => {
-            // alert(JSON.stringify(values, null, 2));
-            console.log(values)
+        onSubmit: async (values) => {
+            try {
+                const response = await axios.post('http://localhost:3000/api/contact', values)
+                const responseData = await response.data
+                console.log('Server response:', responseData);
+            } catch (error) {
+                console.error('Error sending form data:', error);
+                setError(true)
+            }
         },
+
     });
     return (
         <div className=" w-2/3">
@@ -50,7 +60,9 @@ const Form = () => {
                         className="rounded-lg p-2 text-secondary outline-none"
                     />
                     <div className="flex justify-between px-1">
-                        <div></div>
+                        <div>
+                            {error && <div className="text-red-900 w-1/2 md:w-full font-bold">Something Went wrong!!</div>}
+                        </div>
                         <div>{formik.values.message.length}/1000</div>
                     </div>
                     {formik.touched.message && formik.errors.message ? (
