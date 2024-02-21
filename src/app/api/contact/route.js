@@ -1,8 +1,12 @@
+import connectDB from "@/utils/ConnectDB";
+import User from "@/utils/Models";
+
 import { NextResponse } from "next/server";
 import validator from "validator";
 
 //POSt request
 export async function POST(request) {
+  await connectDB();
   const data = await request.json();
   const { email, message } = data;
   try {
@@ -21,8 +25,15 @@ export async function POST(request) {
         { status: 400 }
       );
     }
-    //return data as valid
-    return NextResponse.json(data, { status: 200 });
+
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      existingUser.message.push(message);
+      const updatedUser = await existingUser.save();
+      return NextResponse.json(updatedUser, { status: 200 });
+    }
+    const user = await User.create({ email, message });
+    return NextResponse.json(user, { status: 200 });
   } catch (error) {
     console.error("Error handling POST request:", error);
     return NextResponse.error();
