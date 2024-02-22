@@ -1,4 +1,8 @@
-import Link from 'next/link';
+export const metadata = {
+    title: "Resume",
+    description: "webiste, linkedIn, gmail, Familiar Technologies, about, qualification, skills, experience, message, contact, service, projects",
+  };
+
 
 const ResumePage = () => {
     return (

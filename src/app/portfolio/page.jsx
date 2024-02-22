@@ -1,6 +1,10 @@
 import ImageArray from "./ImageArray"
 import LinkComponent from "./LinkComponent"
 
+export const metadata = {
+    title: "Portfolio",
+    description: "Familiar Technologies, about, qualification, skills, experience, message, contact, service, projects",
+  };
 
 const PortfolioPage = () => {
     const images = [

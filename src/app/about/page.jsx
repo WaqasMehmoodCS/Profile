@@ -1,5 +1,9 @@
 import { info } from "@/lib/personalData/about"
 import Card from "./Card"
+export const metadata = {
+    title: "About",
+    description: "Familiar Technologies, about, qualification, skills, experience",
+  };
 const AboutPage = () => {
     return (
         info && info.map((person) => {
