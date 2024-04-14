@@ -4,7 +4,6 @@ import NavBar from "@/Components/NavBar/page";
 import MenuContextWrapper from "@/Context/MenuContextWrapper";
 import LoadingContextWrapper from "@/Context/LoadingContextWrapper";
 import Loading from "@/Components/Loading/page";
-import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 
 export const metadata = {
   title: "Portfolio",
