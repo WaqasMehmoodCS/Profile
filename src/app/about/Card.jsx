@@ -14,7 +14,7 @@ const Card = (props) => {
     const { degree, university, subjects, year, cgpa } = qualification
     const { familierTechnologies, summary } = about
     return (
-        <div className="border border-white bg-slate-500/70 rounded-lg text-primary w-full p-4 animate-scale-up-center">
+        <div className="bg-slate-500/70 rounded-lg text-primary w-full p-4 animate-scale-up-center">
             {/* <div className="rounded-lg p-2 bg-secondary/60 text-primary shadow-lg shadow-other/30"> */}
             {title === 'about' &&
                 <>

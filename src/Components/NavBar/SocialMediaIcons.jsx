@@ -12,7 +12,7 @@ const SocialMediaIcons = () => {
         // { id: 4, name: "phone", icon: <FaPhoneAlt size={20} />, address: "/" },
     ];
     return (
-        <div className="flex justify-around p-1 sm:gap-2 text-primary">
+        <div className="flex justify-around p-1 sm:gap-2 text-primary mt-2">
             {socialIcons && socialIcons.map((icon) => {
                 return (
                     <Link key={icon.id} href={icon.address} target="_blank">

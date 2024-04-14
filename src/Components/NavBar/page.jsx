@@ -3,12 +3,12 @@ import Navigation from "./Navigation";
 
 const NavBar = () => {
     return (
-        <div className='font-quick flex justify-between h-16'>
-            <div className="flex-1">
-                <Navigation />
-            </div>
-            <div className="sm:hidden">
+        <div className="overflow-auto">
+            <div className="flex justify-end items-center md:hidden font-quick">
                 <MenuIcon />
+            </div>
+            <div className="">
+                <Navigation />
             </div>
         </div>
     )

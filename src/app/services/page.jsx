@@ -9,11 +9,9 @@ export const metadata = {
 
 const ServicesPage = () => {
     return (
-        <div className="p-4 sm:mt-8 lg:mt-10 h-full flex font-manrope">
-            <div className="flex-1 flex flex-col gap-5">
-                <Web />
-                <Mobile />
-            </div>
+        <div className="h-full flex flex-col gap-5 p-5 md:my-10">
+            <Web />
+            <Mobile />
         </div>
     )
 }

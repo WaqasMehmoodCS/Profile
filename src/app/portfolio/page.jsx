@@ -14,8 +14,8 @@ const PortfolioPage = () => {
     ];
     const name = 'Portfolio Application'
     return (
-        <div className="p-4 mt-2 sm:mt-8 lg:mt-10 h-full font-manrope">
-            <div className="border border-white bg-slate-500/70 rounded-lg text-primary w-full p-4 animate-scale-up-center">
+        <div className="p-4 mt-2 sm:mt-8 lg:mt-10 font-manrope">
+            <div className="bg-slate-500/70 rounded-lg text-primary w-full p-4 animate-scale-up-center">
                 <div className="flex flex-col gap-6 p-4">
                     <ImageArray images={images} />
                     <LinkComponent link={'https://profile-waqas.vercel.app/'} name={name} />

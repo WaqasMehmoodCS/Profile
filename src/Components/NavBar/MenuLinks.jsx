@@ -21,13 +21,13 @@ const MenuLinks = () => {
         { id: 6, name: 'Contact', icon: <FaAddressBook size={25} />, address: '/contact' },
     ]
     return (
-        <div className="flex flex-col gap-6 lg:gap-3 w-full">
+        <div className="flex flex-col gap-12 md:gap-2 w-full p-4 md:p-1 mt-5 md:mt-0">
             {links && links.map((link) => {
                 return (
                     <Link key={link.id} href={link.address} onClick={() => { setOpen(!open) }}>
                         <div className={`p-1 pl-2 sm:p-3 rounded-lg ring-1 flex gap-5 hover:bg-other hover:cursor-pointer hover:font-semibold hover:tracking-wider duration-500 items-center ${path === link.address ? 'bg-other' : ''}`}>
-                            <div>{link.icon}</div>
-                            <div>{link.name}</div>
+                            {link.icon}
+                            {link.name}
                         </div>
                     </Link>
                 )
