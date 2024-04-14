@@ -66,7 +66,7 @@ const Form = () => {
                 </div>
             }
             <div className='w-2/3'>
-                <form onSubmit={formik.handleSubmit} className="border border-white bg-slate-500/70 rounded-lg text-primary w-full p-4 animate-scale-up-center flex flex-col gap-8">
+                <form onSubmit={formik.handleSubmit} className="bg-slate-500/70 rounded-lg text-primary w-full p-4 animate-scale-up-center flex flex-col gap-8">
                     <div className="flex flex-col gap-2">
                         <label className="text-lg text-other tracking-widest font-bold" htmlFor="email">Email<span className="text-red-600">*</span></label>
                         <input
