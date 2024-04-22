@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         >
           <LoadingContextWrapper>
             <MenuContextWrapper>
-              <div className="bg-black/60 h-full flex flex-col md:flex-row">
+              <div className="bg-black/60 h-full flex flex-col md:flex-row relative">
                 <div className="md:flex-1">
                   <NavBar />
                 </div>
