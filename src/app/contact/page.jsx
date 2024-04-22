@@ -2,7 +2,7 @@ import Form from "./Form"
 export const metadata = {
     title: "Contact",
     description: "Familiar Technologies, about, qualification, skills, experience, message, contact, service",
-  };
+};
 
 const ContactPage = () => {
     return (
