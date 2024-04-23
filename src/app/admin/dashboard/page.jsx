@@ -2,6 +2,7 @@ import { MdOutlineAdminPanelSettings, MdOutlineCloudUpload } from "react-icons/m
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { BsProjector } from "react-icons/bs";
 import { GrUserWorker } from "react-icons/gr";
+import { middleware } from "../../../../middleware";
 const AdminDashboard = () => {
     const options = [
         {

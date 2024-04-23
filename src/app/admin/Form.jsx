@@ -2,10 +2,8 @@
 import { LoadingContext } from "@/Context/LoadingContextWrapper"
 import axios from "axios"
 import { useFormik } from "formik"
-
 import { useRouter } from "next/navigation"
 import { MdOutlineLogin } from "react-icons/md";
-
 import { useContext, useState } from "react"
 import * as Yup from 'yup'
 const Form = () => {
@@ -30,8 +28,8 @@ const Form = () => {
                 setLoading(true)
                 const response = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/admin`, values)
                 const responseData = await response.data
-                if (responseData.message === 'Authenticated') {
-                    router.replace('/admin/dashboard')
+                if (response.status === 200 && responseData.message === 'Authenticated') {
+                    router.replace(`${process.env.NEXT_PUBLIC_VERCEL_URL}/admin/dashboard`)
                 }
                 values.email = ''
                 values.password = ''
@@ -45,7 +43,6 @@ const Form = () => {
             }
         },
     })
-
     return (
         <>
             {error && <div className="px-5 text-red-700 text-lg tracking-wider">Invalid Credentials</div>}

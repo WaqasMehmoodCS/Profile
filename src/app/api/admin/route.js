@@ -1,12 +1,13 @@
 import connectDB from "@/utils/ConnectDB";
-import { Admin } from "@/utils/Models";
+import Admin from "@/utils/Models/AdminModel";
 import jwt from "jsonwebtoken";
+
 import { cookies } from "next/headers";
 
 import { NextResponse } from "next/server";
 import validator from "validator";
 
-export async function POST(request, response) {
+export async function POST(request) {
   await connectDB();
   const data = await request.json();
   const { email, password } = data;
@@ -48,7 +49,7 @@ export async function POST(request, response) {
         path: "/",
         maxAge: 60,
       });
-      return NextResponse.json({ message: `Authenticated` }, { status: 200 });
+      return NextResponse.json({ message: "Authenticated" }, { status: 200 });
     } catch (error) {
       console.log(`cookie cant be set`);
     }
