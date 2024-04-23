@@ -34,41 +34,27 @@ export async function POST(request) {
     // Check if an admin with the given email exists
     const existingAdmin = await Admin.findOne({ email });
 
-    if (!existingAdmin) {
+    if (!existingAdmin || password !== existingAdmin.password) {
       // If no admin exists, return an error response
       return NextResponse.json(
         { message: "Invalid Credentials" }, // Error message
         { status: 401 } // HTTP status code for unauthorized
       );
     }
-
-    // Check if the provided password matches the existing admin's password
-    if (password !== existingAdmin.password) {
-      return NextResponse.json(
-        { message: "Invalid Credentials" }, // Error message
-        { status: 401 } // HTTP status code for unauthorized
-      );
-    }
-
     // Try to create a JSON Web Token (JWT) and set it as a cookie
-    try {
-      const token = jwt.sign(email, process.env.NEXT_PUBLIC_JWT_KEY); // Sign JWT with a key
-      cookies().set({
-        name: "access_token", // Name of the cookie
-        value: token, // Value of the cookie (JWT)
-        httpOnly: true, // Prevents client-side scripts from accessing the cookie
-        path: "/", // Cookie is valid across the whole domain
-        // maxAge: 60, // Cookie will expire in 60*5 seconds
-      });
+    const token = jwt.sign(email, process.env.NEXT_PUBLIC_JWT_KEY); // Sign JWT with a key
+    cookies().set({
+      name: "access_token", // Name of the cookie
+      value: token, // Value of the cookie (JWT)
+      httpOnly: true, // Prevents client-side scripts from accessing the cookie
+      path: "/", // Cookie is valid across the whole domain
+      maxAge: 60, // Cookie will expire in 60*5 seconds
+    });
 
-      // Return a success response
-      return NextResponse.json({ message: "Authenticated" }, { status: 200 });
-    } catch (error) {
-      console.log(`cookie cant be set`); // Log if there's an issue setting the cookie
-    }
+    // Return a success response
+    return NextResponse.json({ message: "Authenticated" }, { status: 200 });
   } catch (error) {
-    console.log(error); // Log unexpected errors
-
+    // console.log(error); // Log unexpected errors
     // Return a generic error response for server errors
     return NextResponse.json({ message: error }, { status: 500 });
   }
