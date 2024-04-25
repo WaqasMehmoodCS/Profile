@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className="h-screen overflow-hidden bg-no-repeat bg-center bg-cover"
-        style={{ backgroundImage: "url('/pic.png')" }}
+        style={{ backgroundImage: "url('/bg.jpg')" }}
       >
         <Suspense
           fallback={
@@ -25,11 +25,11 @@ export default function RootLayout({ children }) {
         >
           <LoadingContextWrapper>
             <MenuContextWrapper>
-              <div className="bg-black/60 h-full flex flex-col md:flex-row relative">
+              <div className="h-full flex flex-col md:flex-row relative">
                 <div className="md:flex-1">
                   <NavBar />
                 </div>
-                <div className="flex-1 md:flex-[2] h-full overflow-auto">
+                <div className="flex-1 md:flex-[2] h-full overflow-auto md:scroll-hide md:scroll-btn">
                   {children}
                 </div>
               </div>

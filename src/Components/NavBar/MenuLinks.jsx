@@ -21,7 +21,7 @@ const MenuLinks = () => {
         { id: 6, name: 'Contact', icon: <FaAddressBook size={25} />, address: '/contact' },
     ]
     return (
-        <div className="flex flex-col gap-10 w-full p-4 justify-around md:gap-5 2xl:gap-7">
+        <div className="flex flex-col gap-10 w-full p-6 mt-2 overflow-auto scroll-hide scroll-btn ">
             {links && links.map((link) => {
                 return (
                     <Link key={link.id} href={link.address} onClick={() => { setOpen(!open) }}>

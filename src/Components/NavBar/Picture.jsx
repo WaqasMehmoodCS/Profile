@@ -7,7 +7,7 @@ import { IoMdKey } from "react-icons/io";
 const Picture = () => {
     const { open, setOpen } = useContext(MenuContext)
     return (
-        <div className="relative cursor-pointer" onClick={() => setOpen(!open)}>
+        <div className="relative cursor-pointer mt-5" onClick={() => setOpen(!open)}>
             <Link href={'/admin'}>
                 <div className="absolute top-0 right-0 p-2 text-blue-700">
                     <IoMdKey />
