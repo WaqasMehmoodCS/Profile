@@ -6,7 +6,7 @@ export const metadata = {
 };
 const AboutPage = () => {
     return (
-        <div className="h-full overflow-auto md:scroll-hide md:scroll-btn px-2 pb-14 md:pb-5 md:pt-5">
+        <div className="h-full px-2 pb-14 md:pb-5 md:pt-5">
             {info && info.map((person) => {
                 const { id } = person
                 return (

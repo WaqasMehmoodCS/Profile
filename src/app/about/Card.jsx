@@ -15,7 +15,6 @@ const Card = (props) => {
     const { familierTechnologies, summary } = about
     return (
         <div className="bg-slate-500/70 rounded-lg text-primary w-full p-4 animate-scale-up-center">
-            {/* <div className="rounded-lg p-2 bg-secondary/60 text-primary shadow-lg shadow-other/30"> */}
             {title === 'about' &&
                 <>
                     <div className="uppercase font-quick text-other tracking-widest font-bold text-xl underline">{title}</div>

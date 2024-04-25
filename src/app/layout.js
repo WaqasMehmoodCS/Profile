@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Suspense } from "react";
+import { Suspense, useMemo } from "react";
 import NavBar from "@/Components/NavBar/page";
 import MenuContextWrapper from "@/Context/MenuContextWrapper";
 import LoadingContextWrapper from "@/Context/LoadingContextWrapper";
@@ -29,7 +29,8 @@ export default function RootLayout({ children }) {
                 <div className="md:flex-1">
                   <NavBar />
                 </div>
-                <div className="flex-1 md:flex-[2] h-full overflow-auto md:scroll-hide md:scroll-btn">
+
+                <div className="flex-1 md:flex-[2] h-full overflow-auto scroll-hide scroll-btn">
                   {children}
                 </div>
               </div>
