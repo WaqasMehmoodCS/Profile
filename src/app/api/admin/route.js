@@ -48,7 +48,7 @@ export async function POST(request) {
       value: token, // Value of the cookie (JWT)
       httpOnly: true, // Prevents client-side scripts from accessing the cookie
       path: "/", // Cookie is valid across the whole domain
-      maxAge: 60, // Cookie will expire in 60*5 seconds
+      // maxAge: 60, // Cookie will expire in 60*5 seconds
     });
 
     // Return a success response

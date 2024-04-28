@@ -45,8 +45,8 @@ const Form = () => {
     })
     return (
         <>
-            {error && <div className="px-5 text-red-700 text-lg tracking-wider">Invalid Credentials</div>}
-            <form className="p-2 flex flex-col gap-10 py-5 w-2/3" onSubmit={formik.handleSubmit}>
+            {error && <div className="px-5 text-red-700 text-lg tracking-wider">Access Denied</div>}
+            <form className="p-4 flex flex-col gap-10 py-5 w-full" onSubmit={formik.handleSubmit}>
                 <div className="flex flex-col">
                     <label htmlFor="email" className="select-none">Email</label>
                     <input
@@ -69,9 +69,9 @@ const Form = () => {
                         <div className="text-red-900 font-bold absolute mt-[70px]">{formik.errors.password}</div>
                     ) : null}
                 </div>
-                <button type="submit" className="flex justify-center items-center gap-4 shadow-lg bg-other p-4 rounded-lg cursor-pointer w-1/2 m-auto hover:bg-blue-500 uppercase tracking-wider duration-700 transition-all select-none mt-5">
+                <button type="submit" className="flex justify-center items-center gap-4 shadow-lg bg-primary p-4 rounded-lg cursor-pointer w-1/2 m-auto hover:bg-slate-300 text-secondary font-semibold uppercase tracking-wider duration-700 transition-all select-none mt-5">
                     <MdOutlineLogin size={25} />
-                    Login
+                    <p>Login</p>
                 </button>
             </form>
         </>
