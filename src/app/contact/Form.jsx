@@ -61,7 +61,7 @@ const Form = () => {
                         <div>
                             <p className="font-semibold text-primary md:text-lg">Thanks for your interest</p>
                             {/* <p className="md:text-xl text-primary">Your Response has been added.</p> */}
-                            <p className="text-primary">You'll be Contacted Soon.</p>
+                            <p className="text-primary">You&apos;ll be Contacted Soon.</p>
                         </div>
                     </div>
                 </div>
