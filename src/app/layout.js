@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className="h-screen overflow-hidden bg-no-repeat bg-center bg-cover"
+        className="h-screen bg-no-repeat bg-center bg-cover"
         style={{ backgroundImage: "url('/bg.jpg')" }}
       >
         <LoadingContextWrapper>
