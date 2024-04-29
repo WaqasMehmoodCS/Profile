@@ -9,7 +9,7 @@ export const metadata = {
 
 const ServicesPage = () => {
     return (
-        <div className="h-full flex flex-col gap-5 p-5 pb-20 md:pb-0 md:my-10">
+        <div className="h-full flex flex-col gap-5 p-4 pb-10 md:pb-4 overflow-auto scroll-hide scroll-btn">
             <Web />
             <Mobile />
         </div>

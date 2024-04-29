@@ -1,7 +1,6 @@
 import Skills from "./Skills"
 import { info } from "@/lib/personalData/about"
-const Card = (props) => {
-    const { title } = props
+const Card = ({title}) => {
     let data;
     const extractData = async () => {
         info && info.map((user) => {
