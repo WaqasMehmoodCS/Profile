@@ -33,7 +33,6 @@ export async function POST(request) {
 
     // Check if an admin with the given email exists
     const existingAdmin = await Admin.findOne({ email });
-
     if (!existingAdmin || password !== existingAdmin.password) {
       // If no admin exists, return an error response
       return NextResponse.json(
@@ -41,6 +40,7 @@ export async function POST(request) {
         { status: 401 } // HTTP status code for unauthorized
       );
     }
+
     // Try to create a JSON Web Token (JWT) and set it as a cookie
     const token = jwt.sign(email, process.env.NEXT_PUBLIC_JWT_KEY); // Sign JWT with a key
     cookies().set({

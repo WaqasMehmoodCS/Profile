@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import Form from "./Form"
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 

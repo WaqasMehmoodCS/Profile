@@ -26,16 +26,17 @@ const Form = () => {
             try {
                 setError(false)
                 setLoading(true)
-                const response = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/admin`, values)
+                const response = await axios.post(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/login`, values)
                 const responseData = await response.data
                 if (response.status === 200 && responseData.message === 'Authenticated') {
                     router.replace(`${process.env.NEXT_PUBLIC_VERCEL_URL}/admin/dashboard`)
                 }
+                console.log(responseData)
                 values.email = ''
                 values.password = ''
                 setLoading(false)
             } catch (error) {
-                console.log(error)
+                console.log(error.message)
                 setLoading(false)
                 setError(true)
                 values.email = ''
@@ -64,7 +65,7 @@ const Form = () => {
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         value={formik.values.password}
-                        placeholder="Enter Your Password Address" type="password" id="password" className="bg-transparent outline-none border rounded-lg p-2" />
+                        placeholder="Enter Your Password" type="password" id="password" className="bg-transparent outline-none border rounded-lg p-2" />
                     {formik.touched.password && formik.errors.password ? (
                         <div className="text-red-900 font-bold absolute mt-[70px]">{formik.errors.password}</div>
                     ) : null}
