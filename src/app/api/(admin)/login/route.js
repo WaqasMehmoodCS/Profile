@@ -50,7 +50,7 @@ export async function POST(request) {
       value: existingAdmin.token,
       httpOnly: true,
       path: "/",
-      // maxAge: 60,
+      maxAge: 60 * 10,
     });
     // Return a success response
     return NextResponse.json({ message: "Authenticated" }, { status: 200 });
