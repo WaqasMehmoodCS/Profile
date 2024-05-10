@@ -42,7 +42,7 @@ const AdminDashboard = () => {
             id: 6,
             name: 'Logout',
             icon: <IoLogOutOutline size={50} />,
-            path: `${process.env.NEXT_PUBLIC_VERCEL_URL}/admin/dashboard/logout`
+            path: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/logout`
         },
     ]
     return (
