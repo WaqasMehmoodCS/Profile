@@ -8,9 +8,9 @@ export const metadata = {
 
 const PortfolioPage = () => {
     const images = [
-        { id: 1, path: '/1.png' },
-        { id: 2, path: '/2.png' },
-        { id: 3, path: '/3.png' },
+        { id: 1, path: '/1.webp' },
+        { id: 2, path: '/2.webp' },
+        { id: 3, path: '/3.webp' },
     ];
     const name = 'Portfolio Application'
     return (

@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className="h-screen bg-no-repeat bg-center bg-cover"
-        style={{ backgroundImage: "url('/bg.jpg')" }}
+        style={{ backgroundImage: "url('/bg.webp')" }}
       >
         <LoadingContextWrapper>
           <MenuContextWrapper>
